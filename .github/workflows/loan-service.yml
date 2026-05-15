@@ -79,10 +79,10 @@ jobs:
             nuget-${{ runner.os }}-
 
       - name: Restore dependencies
-        run: dotnet restore LoanRecoverySystem.sln
+        run: dotnet restore LoanRecoverySystem.slnx
 
       - name: Build
-        run: dotnet build LoanRecoverySystem.sln --no-restore --configuration Release
+        run: dotnet build LoanRecoverySystem.slnx --no-restore --configuration Release
 
       # Integration tests use Testcontainers — they spin up their own Docker
       # containers (SQL Server, RabbitMQ). Docker is available on ubuntu-latest.
